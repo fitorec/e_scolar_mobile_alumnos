@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Ejemplo formulario con jQuery mobile
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Ejemplo form jquery mobile</title>
+    </head>
+    <body>
+
+<div data-role="page" action='#' id='login'>
+	<div data-role="header">
+			<h3>Login</h3>
+	</div><!-- /header -->
+	<div data-role="content">
+		<form id='formulario'>
+			<label for='username'>
+				Usuario
+				<input id='username' placeholder='p.e. pepito'>
+			</label>
+			<label for='password'>
+				Contraseña
+				<input type='password' id='password'>
+			</label>
+			
+			<input type='submit' value='Aceptar'>
+		</form>
+	</div><!-- fin role content -->
+</div><!-- fin role page -->
+
+
+<div data-role="page" id='principal' data-theme="b">
+	<div data-role="header" data-theme="a">
+			<h3>Bienvenido <span id='username-result'></span></h3>
+	</div><!-- /header -->
+	<div data-role="content" class='content'>
+		<table id='tabla-resultados'>
+			<thead>
+				<tr>
+					<th>id</th>
+					<th>username</th>
+					<th>password</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		<button id='regresar_login' data-role='button'>Registrar otro usaurio</button>
+	</div><!-- fin role content -->
+</div><!-- fin role page -->
+
+        <script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="SQLitePlugin.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
